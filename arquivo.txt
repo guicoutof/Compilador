@@ -1,0 +1,4 @@
+let x = a + b
+let y = t - a
+let a = a * b
+end
