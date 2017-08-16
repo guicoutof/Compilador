@@ -29,7 +29,8 @@ public class Lexico {
     public void analisar(String split){
 
         String[] linha = split.split(" ");
-        linha = split.split("");
+        linha.toString().replace(" ","");
+        
         for(int i=0;i<linha.length;i++){
    
          if( null != comando(linha[i]))tokens.add(comando(linha[i]));
@@ -41,8 +42,10 @@ public class Lexico {
          else if( null != numero(linha[i]))tokens.add(numero(linha[i]));
          else if( null != sinal(linha[i]))tokens.add(sinal(linha[i]));
          else if( null != digito(linha[i]))tokens.add(digito(linha[i]));
-         
-         
+         else{ 
+             System.out.println("Erro lexico");
+             return;
+         }
         }     
     }    
     
