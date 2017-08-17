@@ -26,9 +26,10 @@ public class Sintatico {
             }
             else if(tokens.get(i).tipo.equals("operacao")){
                     if(tokens.get(i+1).tipo.equals("digito")){}
-                    else if(tokens.get(i).tipo.equals("numero")){}
-                    else if(tokens.get(i).tipo.equals("variavel")){}
-                    else if(tokens.get(i).tipo.equals("letra")){}
+                    else if(tokens.get(i+1).tipo.equals("numero")){}
+                    else if(tokens.get(i+1).tipo.equals("numerosinal")){}
+                    else if(tokens.get(i+1).tipo.equals("variavel")){}
+                    else if(tokens.get(i+1).tipo.equals("letra")){}
                     else {
                         System.out.println("Erro sintatico");
                         return;
@@ -37,9 +38,10 @@ public class Sintatico {
             }
             else if(tokens.get(i).tipo.equals("comparacao")){
                     if(tokens.get(i+1).tipo.equals("digito")){}
-                    else if(tokens.get(i).tipo.equals("numero")){}
-                    else if(tokens.get(i).tipo.equals("variavel")){}
-                    else if(tokens.get(i).tipo.equals("letra")){}
+                    else if(tokens.get(i+1).tipo.equals("numero")){}
+                    else if(tokens.get(i+1).tipo.equals("numerosinal")){}
+                    else if(tokens.get(i+1).tipo.equals("variavel")){}
+                    else if(tokens.get(i+1).tipo.equals("letra")){}
                     else {
                         System.out.println("Erro sintatico");
                         return;
@@ -48,9 +50,10 @@ public class Sintatico {
             }
             else if(tokens.get(i).tipo.equals("atribuicao")){
                     if(tokens.get(i+1).tipo.equals("digito")){}
-                    else if(tokens.get(i).tipo.equals("numero")){}
-                    else if(tokens.get(i).tipo.equals("variavel")){}
-                    else if(tokens.get(i).tipo.equals("letra")){}
+                    else if(tokens.get(i+1).tipo.equals("numero")){}
+                    else if(tokens.get(i+1).tipo.equals("numerosinal")){}
+                    else if(tokens.get(i+1).tipo.equals("variavel")){}
+                    else if(tokens.get(i+1).tipo.equals("letra")){}
                     else {
                         System.out.println("Erro sintatico");
                         return;
@@ -59,8 +62,9 @@ public class Sintatico {
             }
             else if(tokens.get(i).tipo.equals("variavel")){
                     if(tokens.get(i+1).tipo.equals("operacao")){}
-                    else if(tokens.get(i).tipo.equals("comparacao")){}
-                    else if(tokens.get(i).tipo.equals("atribuicao")){}
+                    else if(tokens.get(i+1).tipo.equals("numerosinal")){}
+                    else if(tokens.get(i+1).tipo.equals("comparacao")){}
+                    else if(tokens.get(i+1).tipo.equals("atribuicao")){}
                     else {
                         System.out.println("Erro sintatico");
                         return;
@@ -69,8 +73,9 @@ public class Sintatico {
             }
             else if(tokens.get(i).tipo.equals("letra")){
                     if(tokens.get(i+1).tipo.equals("operacao")){}
-                    else if(tokens.get(i).tipo.equals("comparacao")){}
-                    else if(tokens.get(i).tipo.equals("atribuicao")){}
+                    else if(tokens.get(i+1).tipo.equals("numerosinal")){}
+                    else if(tokens.get(i+1).tipo.equals("comparacao")){}
+                    else if(tokens.get(i+1).tipo.equals("atribuicao")){}
                     else {
                         System.out.println("Erro sintatico");
                         return;
@@ -79,7 +84,8 @@ public class Sintatico {
             }
             else if(tokens.get(i).tipo.equals("numero")){
                     if(tokens.get(i+1).tipo.equals("operacao")){}
-                    else if(tokens.get(i).tipo.equals("comparacao")){}
+                    else if(tokens.get(i+1).tipo.equals("numerosinal")){}
+                    else if(tokens.get(i+1).tipo.equals("comparacao")){}
                     else {
                         System.out.println("Erro sintatico");
                         return;
@@ -88,7 +94,8 @@ public class Sintatico {
             }
             else if(tokens.get(i).tipo.equals("digito")){
                     if(tokens.get(i+1).tipo.equals("operacao")){}
-                    else if(tokens.get(i).tipo.equals("comparacao")){}
+                    else if(tokens.get(i+1).tipo.equals("numerosinal")){}
+                    else if(tokens.get(i+1).tipo.equals("comparacao")){}
                     else {
                         System.out.println("Erro sintatico");
                         return;
