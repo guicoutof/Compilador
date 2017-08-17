@@ -22,8 +22,7 @@ public class Compilador {
      */
     
     public static void main(String[] args) {
-    Lexico lexico = new Lexico();
-    
+
     Scanner ler = new Scanner(System.in);
     System.out.printf("Informe o nome de arquivo texto:\n");
     String nome = ler.nextLine();
@@ -35,13 +34,16 @@ public class Compilador {
       String linha = lerArq.readLine(); 
       
       while (linha != null) {
-        System.out.printf("%s\n", linha);
+        Lexico lexico = new Lexico();
+        Sintatico sintatico = new Sintatico();
+         System.out.printf("%s\n", linha);
                 
         lexico.analisar(linha);
+        sintatico.analisar(lexico.tokens);
         linha = lerArq.readLine();
-        
+
       }
-      lexico.exibirArray();
+      //lexico.exibirArray();
       
       
       fp.close();

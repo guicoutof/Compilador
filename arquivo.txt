@@ -1,4 +1,4 @@
-let x = a + b
-let y = t - a
-let a = a * b
+x = a + b
+y = - a
+a = a * b
 end

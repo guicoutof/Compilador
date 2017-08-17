@@ -32,7 +32,7 @@ public class Lexico {
         linha.toString().replace(" ","");
         
         for(int i=0;i<linha.length;i++){
-   
+         if(linha[i].equals(""))i++;
          if( null != comando(linha[i]))tokens.add(comando(linha[i]));
          else if( null != operacao(linha[i]))tokens.add(operacao(linha[i]));
          else if( null != comparacao(linha[i]))tokens.add(comparacao(linha[i]));
@@ -40,7 +40,7 @@ public class Lexico {
          else if( null != variavel(linha[i]))tokens.add(variavel(linha[i]));
          else if( null != letra(linha[i]))tokens.add(letra(linha[i]));
          else if( null != numero(linha[i]))tokens.add(numero(linha[i]));
-         else if( null != sinal(linha[i]))tokens.add(sinal(linha[i]));
+         //else if( null != sinal(linha[i]))tokens.add(sinal(linha[i]));
          else if( null != digito(linha[i]))tokens.add(digito(linha[i]));
          else{ 
              System.out.println("Erro lexico");
@@ -114,11 +114,11 @@ public class Lexico {
         return new Token("numero",palavra);
     }
     
-        public Token sinal(String palavra){
-            if(palavra.equals("+")) return new Token("sinal",palavra);
-            if(palavra.equals("-")) return new Token("sinal",palavra);
-            return null;
-        }
+//        public Token sinal(String palavra){
+//            if(palavra.equals("+")) return new Token("sinal",palavra);
+//            if(palavra.equals("-")) return new Token("sinal",palavra);
+//            return null;
+//        }
     
     public Token digito(String palavra){
         if(palavra.equals("0")) return new Token("digito",palavra);
