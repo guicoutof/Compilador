@@ -109,7 +109,8 @@ public class Lexico {
             if(palavra.charAt(i) != '6') return null;
             if(palavra.charAt(i) != '7') return null;
             if(palavra.charAt(i) != '8') return null;
-            if(palavra.charAt(i) != '9') return null;  
+            if(palavra.charAt(i) != '9') return null;
+            if(palavra.charAt(i) != '.') return null;
         }
         return new Token("numero",palavra);
     }
